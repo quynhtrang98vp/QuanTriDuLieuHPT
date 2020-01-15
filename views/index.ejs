@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Contact V5</title>
+	<title>Cấp phát và quản lý thẻ công dân</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -60,7 +60,7 @@
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Ngày, tháng, năm sinh</span>
-					<input class="input100 NS" type="text" name="Date" placeholder="Nhập theo định dạng ngày/tháng/năm">
+					<input class="input100 NS" type="date" name="Date" placeholder="Nhập theo định dạng ngày/tháng/năm">
 				</div>
 
 				<div class="wrap-input100 validate-input bg4" data-validate="Please Type Your Name">
@@ -73,14 +73,9 @@
 					<input class="input100 T_TRU" type="text" name="name" placeholder="Tiếng việt có dấu">
 				</div>
 
-				<div class="wrap-input100 validate-input bg3" data-validate="Please Date">
+				<div class="wrap-input100 validate-input bg3 rs1-wrap-input100" data-validate="Please Date">
 					<span class="label-input100">Ngày Lên Nộp</span>
-					<input class="input100" type="text" name="Date" placeholder="Nhập theo định dạng ngày/tháng/năm">
-				</div>
-
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100">
-					<span class="label-input100">Ngày </span>
-					<input class="input100" type="text" name="text" placeholder="Nhập theo định dạng ngày/tháng/năm">
+					<input class="input100 NgayKS" type="date" name="Date" placeholder="Nhập theo định dạng ngày/tháng/năm">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
@@ -156,6 +151,7 @@
 			var QQ = $(".QQ").val();
 			var T_TRU = $(".T_TRU").val();
 			var NoiCap = $(".NoiCap").val();
+			var NgayKS = $(".NgayKS").val();
 			$.ajax({
 				url: '/insert',
 				type: 'POST',
